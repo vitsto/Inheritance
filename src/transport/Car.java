@@ -102,7 +102,7 @@ public class Car extends Transport {
 
     @Override
     public void refill(Fuel fuel) {
-        this.fuel = fuel;
+        this.setFuel(fuel);
     }
 
     @Override

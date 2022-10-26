@@ -6,12 +6,12 @@ import utilits.Util;
 
 import java.time.LocalTime;
 
-public class Train extends Transport{
-    double price;
-    LocalTime time;
-    String sourceStation;
-    String destinationStation;
-    int countOfCarriages;
+public class Train extends Transport {
+    private double price;
+    private LocalTime time;
+    private String sourceStation;
+    private String destinationStation;
+    private int countOfCarriages;
 
     public Train(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed,
                  double price, LocalTime time, String sourceStation, String destinationStation, int countOfCarriages) {
@@ -66,7 +66,7 @@ public class Train extends Transport{
     @Override
     public void refill(Fuel fuel) {
         if (fuel instanceof Diesel) {
-            this.fuel = fuel;
+            this.setFuel(fuel);
         } else {
             System.out.println("Неподходящий вид топлива");
         }

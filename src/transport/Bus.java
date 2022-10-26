@@ -13,7 +13,7 @@ public class Bus extends Transport{
     @Override
     public void refill(Fuel fuel) {
         if (fuel instanceof Diesel || fuel instanceof Petrol) {
-            this.fuel = fuel;
+            this.setFuel(fuel);
         } else {
             System.out.println("Неподходящий вид топлива");
         }

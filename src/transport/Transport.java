@@ -4,13 +4,13 @@ import fuel.Fuel;
 import utilits.Util;
 
 public abstract class Transport {
-    protected String brand;
-    protected String model;
-    protected final int productionYear;
-    protected final String productionCountry;
-    protected String color;
-    protected int maxSpeed;
-    protected Fuel fuel;
+    private String brand;
+    private String model;
+    private final int productionYear;
+    private final String productionCountry;
+    private String color;
+    private int maxSpeed;
+    private Fuel fuel;
 
     public Transport(String brand, String model, int productionYear, String productionCountry, String color, int maxSpeed) {
         this.brand = Util.isDefine(brand) ? brand : "undefined";
@@ -19,6 +19,10 @@ public abstract class Transport {
         this.productionCountry = productionCountry;
         this.color = Util.isDefine(color) ? color : "undefined";
         this.maxSpeed = Math.max(0, maxSpeed);
+    }
+
+    public void setFuel(Fuel fuel) {
+        this.fuel = fuel;
     }
 
     public void setBrand(String brand) {

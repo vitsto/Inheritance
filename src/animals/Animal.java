@@ -5,8 +5,8 @@ import utilits.Util;
 import java.util.Objects;
 
 public abstract class Animal {
-    protected final String name;
-    protected int age;
+    private final String name;
+    private int age;
 
     public Animal(String name, int age) {
         this.name = Util.isDefine(name) ? name : "undefined";
